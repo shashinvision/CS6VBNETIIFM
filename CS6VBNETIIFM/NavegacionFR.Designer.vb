@@ -360,6 +360,7 @@ Partial Class NavegacionFR
         '
         'guardarBtn
         '
+        Me.guardarBtn.Enabled = False
         Me.guardarBtn.Location = New System.Drawing.Point(182, 35)
         Me.guardarBtn.Name = "guardarBtn"
         Me.guardarBtn.Size = New System.Drawing.Size(148, 23)
