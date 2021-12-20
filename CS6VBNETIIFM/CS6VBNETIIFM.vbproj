@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>CS6VBNETIIFM</RootNamespace>
-    <StartupObject>CS6VBNETIIFM.Form1</StartupObject>
+    <StartupObject>CS6VBNETIIFM.Principal</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
