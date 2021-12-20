@@ -52,6 +52,7 @@ Partial Class NavegacionFR
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.guardarBtn = New System.Windows.Forms.Button()
+        Me.grabarBdBtn = New System.Windows.Forms.Button()
         Me.nuevoBtn = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ultimoBtn = New System.Windows.Forms.Button()
@@ -349,11 +350,12 @@ Partial Class NavegacionFR
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.guardarBtn)
+        Me.GroupBox4.Controls.Add(Me.grabarBdBtn)
         Me.GroupBox4.Controls.Add(Me.nuevoBtn)
         Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox4.Location = New System.Drawing.Point(469, 376)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(365, 92)
+        Me.GroupBox4.Size = New System.Drawing.Size(386, 92)
         Me.GroupBox4.TabIndex = 8
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Registro"
@@ -361,18 +363,28 @@ Partial Class NavegacionFR
         'guardarBtn
         '
         Me.guardarBtn.Enabled = False
-        Me.guardarBtn.Location = New System.Drawing.Point(182, 35)
+        Me.guardarBtn.Location = New System.Drawing.Point(134, 35)
         Me.guardarBtn.Name = "guardarBtn"
-        Me.guardarBtn.Size = New System.Drawing.Size(148, 23)
-        Me.guardarBtn.TabIndex = 7
-        Me.guardarBtn.Text = "Guardar en BD"
+        Me.guardarBtn.Size = New System.Drawing.Size(118, 23)
+        Me.guardarBtn.TabIndex = 8
+        Me.guardarBtn.Text = "Guardar"
         Me.guardarBtn.UseVisualStyleBackColor = True
+        '
+        'grabarBdBtn
+        '
+        Me.grabarBdBtn.Enabled = False
+        Me.grabarBdBtn.Location = New System.Drawing.Point(258, 35)
+        Me.grabarBdBtn.Name = "grabarBdBtn"
+        Me.grabarBdBtn.Size = New System.Drawing.Size(118, 23)
+        Me.grabarBdBtn.TabIndex = 7
+        Me.grabarBdBtn.Text = "Grabar en BD"
+        Me.grabarBdBtn.UseVisualStyleBackColor = True
         '
         'nuevoBtn
         '
         Me.nuevoBtn.Location = New System.Drawing.Point(41, 35)
         Me.nuevoBtn.Name = "nuevoBtn"
-        Me.nuevoBtn.Size = New System.Drawing.Size(135, 23)
+        Me.nuevoBtn.Size = New System.Drawing.Size(87, 23)
         Me.nuevoBtn.TabIndex = 4
         Me.nuevoBtn.Text = "Nuevo"
         Me.nuevoBtn.UseVisualStyleBackColor = True
@@ -431,7 +443,7 @@ Partial Class NavegacionFR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(855, 480)
+        Me.ClientSize = New System.Drawing.Size(939, 482)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Panel1)
@@ -478,11 +490,12 @@ Partial Class NavegacionFR
     Friend WithEvents Label14 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents guardarBtn As Button
+    Friend WithEvents grabarBdBtn As Button
     Friend WithEvents nuevoBtn As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents ultimoBtn As Button
     Friend WithEvents siguienteBtn As Button
     Friend WithEvents anteriorBtn As Button
     Friend WithEvents primeroBtn As Button
+    Friend WithEvents guardarBtn As Button
 End Class

@@ -91,7 +91,12 @@ Public Class NavegacionFR
     End Sub
 
     Private Sub nuevoBtn_Click(sender As Object, e As EventArgs) Handles nuevoBtn.Click
+
         habilitado(True)
+        Me.BindingContext(tablaProveedores).AddNew()
+        idText.Text = tablaProveedores.Rows.Count + 1
+        nombreTxt.Focus()
+
     End Sub
 
     Public Sub habilitado(verdadero As Boolean)
@@ -109,6 +114,30 @@ Public Class NavegacionFR
         paginaWebTxt.ReadOnly = Not verdadero
 
         guardarBtn.Enabled = verdadero
+        nuevoBtn.Enabled = Not verdadero
 
+
+    End Sub
+
+    Private Sub guardarBtn_Click(sender As Object, e As EventArgs) Handles guardarBtn.Click
+        Me.BindingContext(tablaProveedores).EndCurrentEdit()
+        MessageBox.Show("Registro Guardado sin conexión correctamente.")
+        numReg = tablaProveedores.Rows.Count - 1
+        grabarBdBtn.Enabled = True
+    End Sub
+
+    Private Sub grabarBdBtn_Click(sender As Object, e As EventArgs) Handles grabarBdBtn.Click
+        Try
+
+            If dataSet.HasChanges() Then
+
+                adapterGlobal.Update(dataSet, "Proveedores")
+                dataSet.AcceptChanges()
+                MessageBox.Show("Registro añadido en la base de datos")
+                grabarBdBtn.Enabled = False
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Se produjo un error al intentar guardar en la BBDD: " & vbCrLf & ex.Message)
+        End Try
     End Sub
 End Class

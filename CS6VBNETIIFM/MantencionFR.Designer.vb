@@ -56,6 +56,7 @@ Partial Class MantencionFR
         Me.Label13 = New System.Windows.Forms.Label()
         Me.regionTxt = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.grabarBdBtn = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -68,7 +69,7 @@ Partial Class MantencionFR
         Me.guardarBtn.Name = "guardarBtn"
         Me.guardarBtn.Size = New System.Drawing.Size(148, 23)
         Me.guardarBtn.TabIndex = 7
-        Me.guardarBtn.Text = "Guardar en BD"
+        Me.guardarBtn.Text = "Guardar"
         Me.guardarBtn.UseVisualStyleBackColor = True
         '
         'nuevoBtn
@@ -82,6 +83,7 @@ Partial Class MantencionFR
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.grabarBdBtn)
         Me.GroupBox4.Controls.Add(Me.Button1)
         Me.GroupBox4.Controls.Add(Me.guardarBtn)
         Me.GroupBox4.Controls.Add(Me.nuevoBtn)
@@ -393,6 +395,15 @@ Partial Class MantencionFR
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Región"
         '
+        'grabarBdBtn
+        '
+        Me.grabarBdBtn.Location = New System.Drawing.Point(533, 35)
+        Me.grabarBdBtn.Name = "grabarBdBtn"
+        Me.grabarBdBtn.Size = New System.Drawing.Size(148, 23)
+        Me.grabarBdBtn.TabIndex = 9
+        Me.grabarBdBtn.Text = "Grabar en BD"
+        Me.grabarBdBtn.UseVisualStyleBackColor = True
+        '
         'MantencionFR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -448,4 +459,5 @@ Partial Class MantencionFR
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents grabarBdBtn As Button
 End Class
