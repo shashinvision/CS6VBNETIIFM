@@ -96,6 +96,7 @@ Partial Class NavegacionFR
         '
         'direccionTxt
         '
+        Me.direccionTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.direccionTxt.Location = New System.Drawing.Point(15, 49)
         Me.direccionTxt.Name = "direccionTxt"
         Me.direccionTxt.ReadOnly = True
@@ -114,6 +115,7 @@ Partial Class NavegacionFR
         '
         'paisTxt
         '
+        Me.paisTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.paisTxt.Location = New System.Drawing.Point(15, 159)
         Me.paisTxt.Name = "paisTxt"
         Me.paisTxt.ReadOnly = True
@@ -132,6 +134,7 @@ Partial Class NavegacionFR
         '
         'ciudadTxt
         '
+        Me.ciudadTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ciudadTxt.Location = New System.Drawing.Point(196, 105)
         Me.ciudadTxt.Name = "ciudadTxt"
         Me.ciudadTxt.ReadOnly = True
@@ -150,6 +153,7 @@ Partial Class NavegacionFR
         '
         'CodigoPostalTxt
         '
+        Me.CodigoPostalTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.CodigoPostalTxt.Location = New System.Drawing.Point(196, 159)
         Me.CodigoPostalTxt.Name = "CodigoPostalTxt"
         Me.CodigoPostalTxt.ReadOnly = True
@@ -168,6 +172,7 @@ Partial Class NavegacionFR
         '
         'regionTxt
         '
+        Me.regionTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.regionTxt.Location = New System.Drawing.Point(15, 105)
         Me.regionTxt.Name = "regionTxt"
         Me.regionTxt.ReadOnly = True
@@ -203,13 +208,14 @@ Partial Class NavegacionFR
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.Location = New System.Drawing.Point(28, 39)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(425, 305)
+        Me.GroupBox1.Size = New System.Drawing.Size(425, 313)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos proveedor"
         '
         'faxTxt
         '
+        Me.faxTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.faxTxt.Location = New System.Drawing.Point(19, 217)
         Me.faxTxt.Name = "faxTxt"
         Me.faxTxt.ReadOnly = True
@@ -238,7 +244,8 @@ Partial Class NavegacionFR
         '
         'paginaWebTxt
         '
-        Me.paginaWebTxt.Location = New System.Drawing.Point(19, 271)
+        Me.paginaWebTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.paginaWebTxt.Location = New System.Drawing.Point(19, 282)
         Me.paginaWebTxt.Name = "paginaWebTxt"
         Me.paginaWebTxt.ReadOnly = True
         Me.paginaWebTxt.Size = New System.Drawing.Size(316, 23)
@@ -246,6 +253,7 @@ Partial Class NavegacionFR
         '
         'telefonoTxt
         '
+        Me.telefonoTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.telefonoTxt.Location = New System.Drawing.Point(19, 163)
         Me.telefonoTxt.Name = "telefonoTxt"
         Me.telefonoTxt.ReadOnly = True
@@ -264,6 +272,7 @@ Partial Class NavegacionFR
         '
         'cargoContactoTxt
         '
+        Me.cargoContactoTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cargoContactoTxt.Location = New System.Drawing.Point(196, 104)
         Me.cargoContactoTxt.Name = "cargoContactoTxt"
         Me.cargoContactoTxt.ReadOnly = True
@@ -282,6 +291,7 @@ Partial Class NavegacionFR
         '
         'nombreContactoTxt
         '
+        Me.nombreContactoTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.nombreContactoTxt.Location = New System.Drawing.Point(19, 104)
         Me.nombreContactoTxt.Name = "nombreContactoTxt"
         Me.nombreContactoTxt.ReadOnly = True
@@ -300,6 +310,7 @@ Partial Class NavegacionFR
         '
         'nombreTxt
         '
+        Me.nombreTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.nombreTxt.Location = New System.Drawing.Point(196, 49)
         Me.nombreTxt.Name = "nombreTxt"
         Me.nombreTxt.ReadOnly = True
@@ -318,6 +329,7 @@ Partial Class NavegacionFR
         '
         'idText
         '
+        Me.idText.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.idText.Location = New System.Drawing.Point(19, 49)
         Me.idText.Name = "idText"
         Me.idText.ReadOnly = True
@@ -352,7 +364,7 @@ Partial Class NavegacionFR
         Me.guardarBtn.Name = "guardarBtn"
         Me.guardarBtn.Size = New System.Drawing.Size(148, 23)
         Me.guardarBtn.TabIndex = 7
-        Me.guardarBtn.Text = "Guardar"
+        Me.guardarBtn.Text = "Guardar en BD"
         Me.guardarBtn.UseVisualStyleBackColor = True
         '
         'nuevoBtn

@@ -25,6 +25,7 @@ Partial Class MantencionFR
         Me.guardarBtn = New System.Windows.Forms.Button()
         Me.nuevoBtn = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.faxTxt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,6 +43,8 @@ Partial Class MantencionFR
         Me.idText = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.direccionTxt = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -61,11 +64,11 @@ Partial Class MantencionFR
         '
         'guardarBtn
         '
-        Me.guardarBtn.Location = New System.Drawing.Point(182, 35)
+        Me.guardarBtn.Location = New System.Drawing.Point(364, 35)
         Me.guardarBtn.Name = "guardarBtn"
         Me.guardarBtn.Size = New System.Drawing.Size(148, 23)
         Me.guardarBtn.TabIndex = 7
-        Me.guardarBtn.Text = "Guardar"
+        Me.guardarBtn.Text = "Guardar en BD"
         Me.guardarBtn.UseVisualStyleBackColor = True
         '
         'nuevoBtn
@@ -74,20 +77,30 @@ Partial Class MantencionFR
         Me.nuevoBtn.Name = "nuevoBtn"
         Me.nuevoBtn.Size = New System.Drawing.Size(135, 23)
         Me.nuevoBtn.TabIndex = 4
-        Me.nuevoBtn.Text = "Nuevo"
+        Me.nuevoBtn.Text = "Modificar"
         Me.nuevoBtn.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Button1)
         Me.GroupBox4.Controls.Add(Me.guardarBtn)
         Me.GroupBox4.Controls.Add(Me.nuevoBtn)
         Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox4.Location = New System.Drawing.Point(2, 378)
+        Me.GroupBox4.Location = New System.Drawing.Point(30, 432)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(855, 92)
+        Me.GroupBox4.Size = New System.Drawing.Size(827, 92)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Registro"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(197, 35)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(135, 23)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Eliminar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'faxTxt
         '
@@ -150,7 +163,7 @@ Partial Class MantencionFR
         Me.GroupBox1.Controls.Add(Me.idText)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox1.Location = New System.Drawing.Point(28, 39)
+        Me.GroupBox1.Location = New System.Drawing.Point(28, 82)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(425, 305)
         Me.GroupBox1.TabIndex = 2
@@ -241,12 +254,34 @@ Partial Class MantencionFR
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.ComboBox1)
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Location = New System.Drawing.Point(2, 3)
+        Me.Panel1.Location = New System.Drawing.Point(2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(855, 366)
+        Me.Panel1.Size = New System.Drawing.Size(855, 424)
         Me.Panel1.TabIndex = 9
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(28, 15)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(66, 15)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Proveedor"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(28, 42)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(176, 23)
+        Me.ComboBox1.TabIndex = 12
+        Me.ComboBox1.Text = "-- selecciona un proveedor --"
         '
         'GroupBox2
         '
@@ -261,7 +296,7 @@ Partial Class MantencionFR
         Me.GroupBox2.Controls.Add(Me.regionTxt)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox2.Location = New System.Drawing.Point(469, 43)
+        Me.GroupBox2.Location = New System.Drawing.Point(469, 86)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(374, 301)
         Me.GroupBox2.TabIndex = 14
@@ -362,7 +397,7 @@ Partial Class MantencionFR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1079, 618)
+        Me.ClientSize = New System.Drawing.Size(874, 538)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "MantencionFR"
@@ -372,6 +407,7 @@ Partial Class MantencionFR
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
@@ -409,4 +445,7 @@ Partial Class MantencionFR
     Friend WithEvents Label13 As Label
     Friend WithEvents regionTxt As TextBox
     Friend WithEvents Label14 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label8 As Label
 End Class
