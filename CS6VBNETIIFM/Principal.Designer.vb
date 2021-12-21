@@ -48,20 +48,20 @@ Partial Class Principal
         'NavegaciónToolStripMenuItem
         '
         Me.NavegaciónToolStripMenuItem.Name = "NavegaciónToolStripMenuItem"
-        Me.NavegaciónToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NavegaciónToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.NavegaciónToolStripMenuItem.Text = "Navegación"
         '
         'MantenciónToolStripMenuItem
         '
         Me.MantenciónToolStripMenuItem.Name = "MantenciónToolStripMenuItem"
-        Me.MantenciónToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MantenciónToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.MantenciónToolStripMenuItem.Text = "Mantención"
         '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1125, 602)
+        Me.ClientSize = New System.Drawing.Size(1125, 670)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1

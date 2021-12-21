@@ -23,9 +23,10 @@ Partial Class MantencionFR
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.guardarBtn = New System.Windows.Forms.Button()
-        Me.nuevoBtn = New System.Windows.Forms.Button()
+        Me.modificarBtn = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.grabarBdBtn = New System.Windows.Forms.Button()
+        Me.eliminarBtn = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.faxTxt = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -44,7 +45,7 @@ Partial Class MantencionFR
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.proveedoresCB = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.direccionTxt = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -56,7 +57,6 @@ Partial Class MantencionFR
         Me.Label13 = New System.Windows.Forms.Label()
         Me.regionTxt = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.grabarBdBtn = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -65,28 +65,28 @@ Partial Class MantencionFR
         '
         'guardarBtn
         '
-        Me.guardarBtn.Location = New System.Drawing.Point(364, 35)
+        Me.guardarBtn.Location = New System.Drawing.Point(196, 35)
         Me.guardarBtn.Name = "guardarBtn"
         Me.guardarBtn.Size = New System.Drawing.Size(148, 23)
         Me.guardarBtn.TabIndex = 7
         Me.guardarBtn.Text = "Guardar"
         Me.guardarBtn.UseVisualStyleBackColor = True
         '
-        'nuevoBtn
+        'modificarBtn
         '
-        Me.nuevoBtn.Location = New System.Drawing.Point(41, 35)
-        Me.nuevoBtn.Name = "nuevoBtn"
-        Me.nuevoBtn.Size = New System.Drawing.Size(135, 23)
-        Me.nuevoBtn.TabIndex = 4
-        Me.nuevoBtn.Text = "Modificar"
-        Me.nuevoBtn.UseVisualStyleBackColor = True
+        Me.modificarBtn.Location = New System.Drawing.Point(41, 35)
+        Me.modificarBtn.Name = "modificarBtn"
+        Me.modificarBtn.Size = New System.Drawing.Size(135, 23)
+        Me.modificarBtn.TabIndex = 4
+        Me.modificarBtn.Text = "Modificar"
+        Me.modificarBtn.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.grabarBdBtn)
-        Me.GroupBox4.Controls.Add(Me.Button1)
+        Me.GroupBox4.Controls.Add(Me.eliminarBtn)
         Me.GroupBox4.Controls.Add(Me.guardarBtn)
-        Me.GroupBox4.Controls.Add(Me.nuevoBtn)
+        Me.GroupBox4.Controls.Add(Me.modificarBtn)
         Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox4.Location = New System.Drawing.Point(30, 432)
         Me.GroupBox4.Name = "GroupBox4"
@@ -95,17 +95,28 @@ Partial Class MantencionFR
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Registro"
         '
-        'Button1
+        'grabarBdBtn
         '
-        Me.Button1.Location = New System.Drawing.Point(197, 35)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(135, 23)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Eliminar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.grabarBdBtn.Enabled = False
+        Me.grabarBdBtn.Location = New System.Drawing.Point(510, 35)
+        Me.grabarBdBtn.Name = "grabarBdBtn"
+        Me.grabarBdBtn.Size = New System.Drawing.Size(148, 23)
+        Me.grabarBdBtn.TabIndex = 9
+        Me.grabarBdBtn.Text = "Grabar en BD"
+        Me.grabarBdBtn.UseVisualStyleBackColor = True
+        '
+        'eliminarBtn
+        '
+        Me.eliminarBtn.Location = New System.Drawing.Point(358, 35)
+        Me.eliminarBtn.Name = "eliminarBtn"
+        Me.eliminarBtn.Size = New System.Drawing.Size(135, 23)
+        Me.eliminarBtn.TabIndex = 8
+        Me.eliminarBtn.Text = "Eliminar"
+        Me.eliminarBtn.UseVisualStyleBackColor = True
         '
         'faxTxt
         '
+        Me.faxTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.faxTxt.Location = New System.Drawing.Point(19, 217)
         Me.faxTxt.Name = "faxTxt"
         Me.faxTxt.ReadOnly = True
@@ -134,7 +145,8 @@ Partial Class MantencionFR
         '
         'paginaWebTxt
         '
-        Me.paginaWebTxt.Location = New System.Drawing.Point(19, 271)
+        Me.paginaWebTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.paginaWebTxt.Location = New System.Drawing.Point(19, 282)
         Me.paginaWebTxt.Name = "paginaWebTxt"
         Me.paginaWebTxt.ReadOnly = True
         Me.paginaWebTxt.Size = New System.Drawing.Size(316, 23)
@@ -142,6 +154,7 @@ Partial Class MantencionFR
         '
         'telefonoTxt
         '
+        Me.telefonoTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.telefonoTxt.Location = New System.Drawing.Point(19, 163)
         Me.telefonoTxt.Name = "telefonoTxt"
         Me.telefonoTxt.ReadOnly = True
@@ -167,7 +180,7 @@ Partial Class MantencionFR
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.Location = New System.Drawing.Point(28, 82)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(425, 305)
+        Me.GroupBox1.Size = New System.Drawing.Size(425, 328)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos proveedor"
@@ -184,6 +197,7 @@ Partial Class MantencionFR
         '
         'cargoContactoTxt
         '
+        Me.cargoContactoTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cargoContactoTxt.Location = New System.Drawing.Point(196, 104)
         Me.cargoContactoTxt.Name = "cargoContactoTxt"
         Me.cargoContactoTxt.ReadOnly = True
@@ -202,6 +216,7 @@ Partial Class MantencionFR
         '
         'nombreContactoTxt
         '
+        Me.nombreContactoTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.nombreContactoTxt.Location = New System.Drawing.Point(19, 104)
         Me.nombreContactoTxt.Name = "nombreContactoTxt"
         Me.nombreContactoTxt.ReadOnly = True
@@ -220,6 +235,7 @@ Partial Class MantencionFR
         '
         'nombreTxt
         '
+        Me.nombreTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.nombreTxt.Location = New System.Drawing.Point(196, 49)
         Me.nombreTxt.Name = "nombreTxt"
         Me.nombreTxt.ReadOnly = True
@@ -238,6 +254,7 @@ Partial Class MantencionFR
         '
         'idText
         '
+        Me.idText.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.idText.Location = New System.Drawing.Point(19, 49)
         Me.idText.Name = "idText"
         Me.idText.ReadOnly = True
@@ -257,7 +274,7 @@ Partial Class MantencionFR
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.proveedoresCB)
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Location = New System.Drawing.Point(2, 2)
@@ -276,14 +293,13 @@ Partial Class MantencionFR
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Proveedor"
         '
-        'ComboBox1
+        'proveedoresCB
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(28, 42)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(176, 23)
-        Me.ComboBox1.TabIndex = 12
-        Me.ComboBox1.Text = "-- selecciona un proveedor --"
+        Me.proveedoresCB.FormattingEnabled = True
+        Me.proveedoresCB.Location = New System.Drawing.Point(28, 42)
+        Me.proveedoresCB.Name = "proveedoresCB"
+        Me.proveedoresCB.Size = New System.Drawing.Size(176, 23)
+        Me.proveedoresCB.TabIndex = 12
         '
         'GroupBox2
         '
@@ -307,6 +323,7 @@ Partial Class MantencionFR
         '
         'direccionTxt
         '
+        Me.direccionTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.direccionTxt.Location = New System.Drawing.Point(15, 49)
         Me.direccionTxt.Name = "direccionTxt"
         Me.direccionTxt.ReadOnly = True
@@ -325,6 +342,7 @@ Partial Class MantencionFR
         '
         'paisTxt
         '
+        Me.paisTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.paisTxt.Location = New System.Drawing.Point(15, 159)
         Me.paisTxt.Name = "paisTxt"
         Me.paisTxt.ReadOnly = True
@@ -343,6 +361,7 @@ Partial Class MantencionFR
         '
         'ciudadTxt
         '
+        Me.ciudadTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ciudadTxt.Location = New System.Drawing.Point(196, 105)
         Me.ciudadTxt.Name = "ciudadTxt"
         Me.ciudadTxt.ReadOnly = True
@@ -361,6 +380,7 @@ Partial Class MantencionFR
         '
         'CodigoPostalTxt
         '
+        Me.CodigoPostalTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.CodigoPostalTxt.Location = New System.Drawing.Point(196, 159)
         Me.CodigoPostalTxt.Name = "CodigoPostalTxt"
         Me.CodigoPostalTxt.ReadOnly = True
@@ -379,6 +399,7 @@ Partial Class MantencionFR
         '
         'regionTxt
         '
+        Me.regionTxt.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.regionTxt.Location = New System.Drawing.Point(15, 105)
         Me.regionTxt.Name = "regionTxt"
         Me.regionTxt.ReadOnly = True
@@ -394,15 +415,6 @@ Partial Class MantencionFR
         Me.Label14.Size = New System.Drawing.Size(46, 15)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Región"
-        '
-        'grabarBdBtn
-        '
-        Me.grabarBdBtn.Location = New System.Drawing.Point(533, 35)
-        Me.grabarBdBtn.Name = "grabarBdBtn"
-        Me.grabarBdBtn.Size = New System.Drawing.Size(148, 23)
-        Me.grabarBdBtn.TabIndex = 9
-        Me.grabarBdBtn.Text = "Grabar en BD"
-        Me.grabarBdBtn.UseVisualStyleBackColor = True
         '
         'MantencionFR
         '
@@ -426,7 +438,7 @@ Partial Class MantencionFR
     End Sub
 
     Friend WithEvents guardarBtn As Button
-    Friend WithEvents nuevoBtn As Button
+    Friend WithEvents modificarBtn As Button
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents faxTxt As TextBox
@@ -456,8 +468,8 @@ Partial Class MantencionFR
     Friend WithEvents Label13 As Label
     Friend WithEvents regionTxt As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents eliminarBtn As Button
+    Friend WithEvents proveedoresCB As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents grabarBdBtn As Button
 End Class
